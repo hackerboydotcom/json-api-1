@@ -137,9 +137,9 @@ time.
 The ```page[size]``` parameter indicates the number of results that the client
 would like to see in the response.
 
-If `page[size]` is provided, it **MUST** be a positive integer. If this
-requirement isn't met — e.g. if `page[size]` is negative — the server **MUST**
-respond according to the rules for the [invalid query parameter error].
+If `page[size]` is provided, it **MUST** be a positive integer.<sup>[1](#fn-1)</sup>
+If this requirement isn't met — e.g. if `page[size]` is negative — the server
+**MUST** respond according to the rules for the [invalid query parameter error].
 
 For each endpoint on which it supports pagintation, a server **MAY** define a
 maximum number of results that it will send in response to a paginated request
@@ -475,6 +475,41 @@ one), and vice-versa when `page[before]` is in use. So, by allowing the server
 to return a link that might end up corresponding to an empty page, the server
 can often skip a query that will never be needed.
 
+## Collection Sizes
+The pagination metadata **MAY** contain a `total` member containing an integer
+indicating the total number of items in the list of results that's being
+paginated.
+
+For example, a response to `GET /people?page[size]=2` might include:
+
+```
+{
+  "meta": {
+    "page": { "total": 200 }
+  },
+  // links omitted
+  "data": [
+    {
+      "type": "people",
+      // ...
+    },
+    {
+      "type": "people",
+      // ...
+    }
+  ]
+}
+```
+
+The pagination metadata **MAY** also contain an `estimatedTotal` member.
+If present, the value of this member **MUST** be an object. That object
+**MAY** have one key, `bestGuess`. If present, `bestGuess` **MUST** contain
+an integer indicating the server's best estimate of the size of the full results
+list.
+
+Server's might choose to use `estimatedTotal` instead of `total` when computing
+the exact total is costly.
+
 # Error Cases
 ## <a id="errors-unsupported-sort"></a> Unsupported Sort Error
 The server **MUST** respond to this error by sending a `400 Bad Request`. The
@@ -545,6 +580,15 @@ response document **MUST** contain an error object that has a `type` link of:
 ```
 https://jsonapi.org/profiles/cursor-pagination/range-pagination-not-supported
 ```
+
+# Notes
+
+1. <a id="fn-1"></a> Technically, a URI is a series of characters, so the value
+   of a query parameter -- including `page[size]` -- is always a string. When
+   the text says the value "MUST be a positive integer", it means more precisely
+   that the value **MUST** be a sequence of characters matching the regular
+   expression `^[0-9]+$`, which **MUST** then be interpreted as a base-10 integer.
+
 
 [sorting requirement]: #concepts-sorting
 [cursor]: #concepts-cursors

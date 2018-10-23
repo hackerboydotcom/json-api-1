@@ -39,7 +39,7 @@ to fit your needs** before developing a new one.
 - If a suitable profile already exists, consider using it. Having fewer, more
 widely-deployed profiles makes it easier to create shared tooling.
 
-- If there's an existing profile that could be amented to fit your needs,
+- If there's an existing profile that could be amended to fit your needs,
 consider asking the profile's author if they would be willing to modify it as
 needed. Contact them through the information in their profile's registration
 and give them some time to reply.

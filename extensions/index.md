@@ -50,7 +50,7 @@ To author your profile, [download and fill out the template](/profile_template.m
 
 ### <a href="#profile-register" id="profile-register" class="headerlink"></a> Register & Use Your Profile
 
-Once it's ready, submit your profile to the JSON:API profile registry by creating
+Once your profile is ready, submit it to the JSON:API profile registry by creating
 a pull request that contains your filled out template as an `index.md` file in a 
 uniquely-named folder in the [`_profiles`](https://github.com/json-api/json-api/tree/gh-pages/_profiles) 
 directory.

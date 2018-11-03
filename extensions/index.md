@@ -7,7 +7,7 @@ redirect_from: /profiles
 
 JSON:API can be extended with profiles. These profiles enable an API to 
 provide clients with information or functionality beyond that described 
-in the base JSON API specification.
+in the base JSON:API specification.
 
 Anyone can author a profile, and a single profile can be reused by multiple APIs.
 Popular profiles may be implemented by off-the-shelf tools so that developers 

@@ -55,7 +55,7 @@ a pull request that contains your filled out template as an `index.md` file in a
 uniquely-named folder in the [`_profiles`](https://github.com/json-api/json-api/tree/gh-pages/_profiles) 
 directory.
    
-Your submission will be **approved within a week** by one of JSON API's 
+Your submission will be **approved within a week** by one of JSON:API's 
 editors, assuming it meets the [profile extension requirements](/format/1.1/#profiles-authoring)
 and follows the template above. The community may give you feedback on your
 submission before it's approved, but you are not required to act on this 
@@ -69,7 +69,7 @@ ramifications.
 
 Also, note that if the author of a registered profile dies, moves out of contact,
 or otherwise can't or won't make changes that are important to the community,
-the JSON API's editors may reassign responsibility for the extension, to allow it
+the JSON:API's editors may reassign responsibility for the extension, to allow it
 to continue to evolve.
 
 By registering your profile:
@@ -79,10 +79,10 @@ By registering your profile:
 2. it will be given an official url on jsonapi.org. This will be the URL you and
    others use to apply/identify the profile.
 
-3. one of the JSON API's editors will review your submission to check that it 
+3. one of the JSON:API's editors will review your submission to check that it 
    follows the [profile extension requirements](/format/1.1/#profiles-authoring).
    These requirements can be a bit tricky, so getting an expert review ensures
-   that your profile is legal for use with JSON API.
+   that your profile is legal for use with JSON:API.
    
 Even though profile registration is strongly encouraged, it isn't mandatory.
 If you choose not to register your profile, you can create your own URL, on 
@@ -91,7 +91,7 @@ self-host the filled out template at this URL.
 
 ## <a href="#prior-extensions" id="prior-extensions" class="headerlink"></a> Prior Extensions
 
-JSON API previously offered experimental support for a different extension
+JSON:API previously offered experimental support for a different extension
 negotiation system than the one now in the specification, and it provided a
 number of extensions for use with that old negotiation system. However, this
 system was always experimental and has now been deprecated.
